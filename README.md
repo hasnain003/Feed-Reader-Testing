@@ -18,7 +18,8 @@ Edge  | Chrome | Firefox | Opera | Safari
 ----- | ------ | ------- | ----- | ------
 Latest:white_check_mark: | Latest:white_check_mark: | Latest:white_check_mark: | Latest:white_check_mark: | Latest:white_check_mark:
 
-###Following functionality has been Tested###
+###Following functionality has been Tested
+
 1. Tests to make sure that the allFeeds variable has been defined and that it is not empty. 
 2. Loops through each feed and determines if the URL is defined and not empty.
 3. Loops through each feed and determines that each feed has a name and not empty.
