@@ -69,10 +69,10 @@ $(function() {
           */
           it('changes visibility when the menu is clicked', function() {
             $('.menu-icon-link').click();
-            expect($(body).hasClass('menu-hidden')).toBe(false);
+            expect($('body').hasClass('menu-hidden')).toBe(false);
 
             $('.menu-icon-link').click();
-            expect($(body).hasClass('menu-hidden')).toBe(true);
+            expect($('body').hasClass('menu-hidden')).toBe(true);
           });
       });
 
@@ -99,15 +99,13 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          */
         let firstFeed,secondFeed;
-
          beforeEach(function(done) {
-            loadFeed(1,function() {
-                firstFeed=$('.feed').html();
-                done();
-            });
             loadFeed(0,function() {
-                secondFeed=$('.feed').html();
-                done();
+                firstFeed=$('.feed').html();
+                loadFeed(1,function() {
+                    secondFeed=$('.feed').html();
+                    done();
+                });
             });
          });
          it('new feed is loaded and is different',function(){
