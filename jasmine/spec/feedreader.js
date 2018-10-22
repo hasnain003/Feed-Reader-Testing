@@ -68,12 +68,11 @@ $(function() {
           * visibility when the menu icon is clicked.
           */
           it('changes visibility when the menu is clicked', function() {
-            const isMenuHidden = document.getElementsByClassName('menu-hidden');
             $('.menu-icon-link').click();
-            expect(isMenuHidden.length).toBe(0);
+            expect($(body).hasClass('menu-hidden')).toBe(false);
 
             $('.menu-icon-link').click();
-            expect(isMenuHidden.length).not.toBe(0);
+            expect($(body).hasClass('menu-hidden')).toBe(true);
           });
       });
 
